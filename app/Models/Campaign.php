@@ -58,4 +58,15 @@ class Campaign extends Model
     return
       $this->hasMany(Donation::class)->selectRaw('donations.campaign_id,SUM(donations.amount) as total')->where('donations.status', 'success')->groupBy('donations.campaign_id');
   }
+
+  /**
+   * getImageAttribute
+   *
+   * @param mixed $image
+   * @return void
+   */
+  public function getImageAttribute($image)
+  {
+    return asset('storage/campaigns/' . $image);
+  }
 }

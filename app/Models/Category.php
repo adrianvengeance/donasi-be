@@ -27,4 +27,15 @@ class Category extends Model
     {
         return $this->hasMany(Campaign::class);
     }
+
+    /**
+     * getImageAttribute
+     *
+     * @param mixed $image
+     * @return void
+     */
+    public function getImageAttribute($image)
+    {
+        return asset('storage/categories/' . $image);
+    }
 }
