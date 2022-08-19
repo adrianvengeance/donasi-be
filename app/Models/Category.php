@@ -17,4 +17,14 @@ class Category extends Model
     protected $fillable = [
         'name', 'slug', 'image'
     ];
+
+    /**
+     * campaign
+     *
+     * @return void
+     */
+    public function campaigns()
+    {
+        return $this->hasMany(Campaign::class);
+    }
 }
