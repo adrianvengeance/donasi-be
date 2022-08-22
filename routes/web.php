@@ -35,5 +35,8 @@ Route::prefix('admin')->group(function () {
 
         //route resource categories
         Route::resource('/category', CategoryController::class, ['as' => 'admin']);
+
+        //route resource campaign
+        Route::resource('/campaign', CampaignController::class, ['as' => 'admin']);
     });
 });
