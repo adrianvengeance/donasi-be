@@ -41,3 +41,8 @@ Route::get('/campaign/{slug}', [CampaignController::class, 'show']);
 
 // Api Slider
 Route::get('/slider', [SliderController::class, 'index']);
+
+// Api Profile
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth:api');
+Route::post('/profile', [ProfileController::class, 'update'])->middleware('auth:api');
+Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->middleware('auth:api');
