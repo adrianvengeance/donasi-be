@@ -33,3 +33,10 @@ Route::post('/register', [RegisterController::class, 'register']);
  * Api Login
  */
 Route::post('/login', [LoginController::class, 'login']);
+
+/**
+ * APi Category
+ */
+Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/category/{slug}', [CategoryController::class, 'show']);
+Route::get('/categoryHome', [CategoryController::class, 'categoryHome']);
