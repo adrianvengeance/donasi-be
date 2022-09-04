@@ -24,25 +24,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-/**
- * Api Register
- */
+// Api Register
 Route::post('/register', [RegisterController::class, 'register']);
 
-/**
- * Api Login
- */
+// Api Login
 Route::post('/login', [LoginController::class, 'login']);
 
-/**
- * APi Category
- */
+// APi Category
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/{slug}', [CategoryController::class, 'show']);
 Route::get('/categoryHome', [CategoryController::class, 'categoryHome']);
 
-/**
- * Api Campaign
- */
+// Api Campaign
 Route::get('/campaign', [CampaignController::class, 'index']);
 Route::get('/campaign/{slug}', [CampaignController::class, 'show']);
+
+// Api Slider
+Route::get('/slider', [SliderController::class, 'index']);
