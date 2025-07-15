@@ -8,3 +8,10 @@
 
 /.github export-ignore
 CHANGELOG.md export-ignore
+
+public/css/* linguist-vendored
+public/js/* linguist-vendored
+resources/js/* linguist-vendored
+resources/css/* linguist-vendored
+node_modules/* linguist-vendored
+vendor/* linguist-vendored
