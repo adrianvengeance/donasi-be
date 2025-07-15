@@ -81,7 +81,7 @@ return [
         'donaturs' => [
             // <-- nama provider "donaturs"
             'driver' => 'eloquent', // <-- driver "eloquent"
-            'model' => AppModelsDonatur::class, // <-- model'app/Models/Donatur.php'
+            'model' => App\Models\Donatur::class, // <-- model'app/Models/Donatur.php'
         ],
     ],
 

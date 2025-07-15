@@ -42,7 +42,7 @@ class CampaignController extends Controller
 
         $campaign = Campaign::create([
             'title'             => $request->title,
-            'slug'              => Str::slug($request->target_donation),
+            'slug'              => Str::slug($request->title, '-'),
             'category_id'       => $request->category_id,
             'target_donation'   => $request->target_donation,
             'max_date'          => $request->max_date,
